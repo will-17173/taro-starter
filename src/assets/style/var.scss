@@ -1,0 +1,117 @@
+// $assetPath: 'http://localhost:3333/img';
+// $assetPath: 'http://ip-27-yijia-swagger.coralcodes.com/uploads/static/img';
+$assetPath: 'https://nurseuser.day-care.cn/uploads/static/img';
+$bg-cupon: url(#{$assetPath}/bg-cupon.png);
+$bg-cupon1: url(#{$assetPath}/bg-cupon1.png);
+$bg-cupon1-gray: url(#{$assetPath}/bg-cupon1-gray.png);
+$bg-cupon-item: url(#{$assetPath}/bg-cupon-item.png);
+$bg-me: url(#{$assetPath}/bg-me.png);
+$bg-dd: url(#{$assetPath}/bg-dd.png);
+$bg-cot: url(#{$assetPath}/bg-cot.png);
+$bg-canncel: url(#{$assetPath}/bg-canncel.png);
+$bg-order-d: url(#{$assetPath}/bg-order-d.png);
+$bg-login: url(#{$assetPath}/bg-login.png);
+$btn-close: url(#{$assetPath}/btn-close.png);
+$bg-lc: url(#{$assetPath}/bg-lc.png);
+$ico-nurse: url(#{$assetPath}/ico-nurse.png);
+$ico-success: url(#{$assetPath}/ico-success.png);
+$ico-jchl: url(#{$assetPath}/ico-jchl.png);
+$ico-jypz: url(#{$assetPath}/ico-jypz.png);
+$ico-kfhl: url(#{$assetPath}/ico-kfhl.png);
+$ico-zyhl: url(#{$assetPath}/ico-zyhl.png);
+$ico-area: url(#{$assetPath}/ico-area.png);
+$ico-arr-r: url(#{$assetPath}/ico-arr-r.png);
+$ico-fwb: url(#{$assetPath}/ico-fwb.png);
+$ico-address: url(#{$assetPath}/ico-address.png);
+$ico-contact: url(#{$assetPath}/ico-contact.png);
+$ico-info: url(#{$assetPath}/ico-info.png);
+$ico-setting: url(#{$assetPath}/ico-setting.png);
+$ico-yhq: url(#{$assetPath}/ico-yhq.png);
+$ico-yj: url(#{$assetPath}/ico-yj.png);
+$ico-r: url(#{$assetPath}/ico-r.png);
+$ico-s: url(#{$assetPath}/ico-s.png);
+$ico-add: url(#{$assetPath}/ico-add.png);
+$ico-gou: url(#{$assetPath}/ico-gou.png);
+$ico-tou: url(#{$assetPath}/ico-tou.png);
+$ico-upload: url(#{$assetPath}/ico-upload.png);
+$ico-edit: url(#{$assetPath}/ico-edit.png);
+$ico-empty-fwb: url(#{$assetPath}/ico-empty-fwb.png);
+$ico-empty-yhq: url(#{$assetPath}/ico-empty-yhq.png);
+$ico-empty-add: url(#{$assetPath}/ico-empty-add.png);
+$ico-empty-dd: url(#{$assetPath}/ico-empty-dd.png);
+$ico-empty-hz: url(#{$assetPath}/ico-empty-hz.png);
+$star: url(#{$assetPath}/star.png);
+$star-gray: url(#{$assetPath}/star-gray.png);
+$star-l-gray: url(#{$assetPath}/star-l-gray.png);
+$star-l-green: url(#{$assetPath}/star-l-grenn.png);
+$c-l: url(#{$assetPath}/c-l.png);
+$c-r: url(#{$assetPath}/c-r.png);
+
+$org:#FF960C;
+$green:#00b6ba;
+
+%plist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%fix-fill {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+
+%position-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin height($height) {
+  height: $height;
+  line-height: $height;
+}
+@mixin posi-hv-middle($posi: absolute) {
+  position: #{$posi};
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@mixin multirow-ellipsis($row: 1, $line-height: 22px) {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: $line-height;
+  max-height: $line-height * $row;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $row;
+}
+@mixin arrow($direction, $size, $borderColor) {
+  border: $size dashed transparent;
+  @if $direction==top {
+    border-bottom-style: solid;
+    border-bottom-color: $borderColor;
+  }
+  @else if $direction==right {
+    border-left-style: solid;
+    border-left-color: $borderColor;
+  }
+  @else if $direction==bottom {
+    border-top-style: solid;
+    border-top-color: $borderColor;
+  }
+  @else if $direction==left {
+    border-right-style: solid;
+    border-right-color: $borderColor;
+  }
+}
